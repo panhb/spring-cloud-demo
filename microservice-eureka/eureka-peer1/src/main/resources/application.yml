@@ -1,6 +1,10 @@
 server :
   port : 8001 # 指定该Eureka实例的端⼝
 
+spring :
+  application :
+    name : microservice-eureka
+
 eureka :
   instance :
     hostname : peer1 # 指定该Eureka实例的主机名

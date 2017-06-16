@@ -1,6 +1,10 @@
 server :
   port : 8002
 
+spring :
+  application :
+    name : microservice-eureka
+
 eureka :
   instance :
     hostname : peer2

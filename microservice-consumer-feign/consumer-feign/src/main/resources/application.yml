@@ -1,0 +1,17 @@
+server :
+  port : 8031
+
+spring :
+  application :
+    name : microservice-consumer-feign 
+
+eureka :
+  client :
+    serviceUrl :
+      defaultZone : http://peer1:8001/eureka/,http://peer2:8002/eureka/
+  instance :
+    preferIpAddress : true
+
+ribbon:
+  eureka:
+    enabled: true
