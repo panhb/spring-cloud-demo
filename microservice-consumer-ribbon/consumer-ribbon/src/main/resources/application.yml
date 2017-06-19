@@ -3,7 +3,7 @@ server :
 
 spring :
   application :
-    name : microservice-consumer-ribbon # 项⽬名称尽量⽤⼩写
+    name : microservice-consumer-ribbon
 
 eureka :
   client :
