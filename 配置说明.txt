@@ -1,0 +1,33 @@
+注册中心
+microservice-eureka
+--eureka-peer1 8001
+--eureka-peer2 8002
+
+提供者
+microservice-provider
+--provider 8011
+--provider-sleuth(zipkin) 8012
+
+消费者
+microservice-consumer-feign
+--consumer-feign 8022
+
+microservice-consumer-feign-hystrix
+--consumer-feign-hystrix 8032
+
+microservice-consumer-ribbon
+--consumer-ribbon 8021
+
+microservice-consumer-ribbon-hystrix
+--consumer-ribbon-hystrix 8031
+
+microservice-consumer-ribbon-hystrix-sleuth
+--consumer-ribbon-hystrix-sleuth(zipkin) 8033
+
+hystrix面板
+microservice-hystrix-dashboard
+--hystrix-dashboard 8041
+
+zipkin面板
+microservice-sleuth-zipkin
+--sleuth-zipkin 9000
