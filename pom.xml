@@ -13,6 +13,12 @@
 
     <modules>
         <module>microservice-eureka</module>
+        <module>microservice-provider</module>
+        <module>microservice-consumer-ribbon</module>
+        <module>microservice-consumer-feign</module>
+        <module>microservice-consumer-ribbon-hystrix</module>
+        <module>microservice-consumer-feign-hystrix</module>
+        <module>microservice-hystrix-dashboard</module>
     </modules>
 
     <properties>
