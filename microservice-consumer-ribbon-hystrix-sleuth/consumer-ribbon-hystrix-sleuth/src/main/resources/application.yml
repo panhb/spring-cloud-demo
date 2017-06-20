@@ -1,0 +1,16 @@
+server :
+  port : 8031
+
+spring :
+  application :
+    name : microservice-consumer-ribbon-hystrix-sleuth
+  zipkin :
+      baseUrl : http://localhost:9000
+      enabled : true
+
+eureka :
+  client :
+    serviceUrl :
+      defaultZone : http://peer1:8001/eureka/,http://peer2:8002/eureka/
+  instance :
+    hostname : ribbon

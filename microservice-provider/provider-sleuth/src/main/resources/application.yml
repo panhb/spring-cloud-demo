@@ -1,0 +1,29 @@
+server :
+  port : 8012
+
+spring :
+  application :
+    name : microservice-provider
+  jpa:
+    generate-ddl : false
+    show-sql : true
+    hibernate :
+      ddl-auto : update
+      naming-strategy : org.hibernate.cfg.ImprovedNamingStrategy
+    properties :
+      hibernate :
+        dialect : org.hibernate.dialect.MySQL5Dialect
+  datasource :
+    url : jdbc:mysql://192.168.0.86:3306/demo?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username : root
+    password : admin
+  zipkin :
+    baseUrl : http://localhost:9000
+    enabled : true
+
+eureka :
+  client :
+    serviceUrl :
+      defaultZone : http://peer1:8001/eureka/,http://peer2:8002/eureka/
+  instance :
+    preferIpAddress : true

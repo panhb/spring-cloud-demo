@@ -17,8 +17,10 @@
         <module>microservice-consumer-ribbon</module>
         <module>microservice-consumer-feign</module>
         <module>microservice-consumer-ribbon-hystrix</module>
+        <module>microservice-consumer-ribbon-hystrix-sleuth</module>
         <module>microservice-consumer-feign-hystrix</module>
         <module>microservice-hystrix-dashboard</module>
+        <module>microservice-sleuth-zipkin</module>
     </modules>
 
     <properties>
