@@ -21,6 +21,7 @@
         <module>microservice-consumer-feign-hystrix</module>
         <module>microservice-hystrix-dashboard</module>
         <module>microservice-sleuth-zipkin</module>
+        <module>microservice-api-gateway</module>
     </modules>
 
     <properties>

@@ -35,3 +35,7 @@ microservice-hystrix-turbine
 zipkin面板
 microservice-sleuth-zipkin
 --sleuth-zipkin 9000
+
+gateway
+microservice-api-gateway
+--api-gateway 8051
