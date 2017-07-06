@@ -15,3 +15,8 @@ eureka :
       #defaultZone : http://${eureka.instance.hostname}:${server.port}/eureka/
     serviceUrl :
       defaultZone : http://peer2:8002/eureka/
+
+#eureka.instance.lease-expiration-duration-in-seconds=90 定义服务失效时间，默认90秒
+#eureka.instance.lease-renewal-interval-in-seconds=30 定义服务续约任务的调用间隔时间，默认30秒
+#eureka.client.registry-fetch-interval-seconds=30 定义服务清单刷新间隔时间，默认30秒
+#eureka.server.enable-self-preservation=true 自我保护机制，默认开启

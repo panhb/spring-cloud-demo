@@ -28,6 +28,10 @@ hystrix面板
 microservice-hystrix-dashboard
 --hystrix-dashboard 8041
 
+turbine
+microservice-hystrix-turbine
+--hystrix-turbine 8042
+
 zipkin面板
 microservice-sleuth-zipkin
 --sleuth-zipkin 9000
