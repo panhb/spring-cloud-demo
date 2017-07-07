@@ -1,0 +1,13 @@
+server :
+  port : 8062
+
+spring :
+  application :
+    name : microservice-config-client
+
+eureka :
+  client :
+    serviceUrl :
+      defaultZone : http://peer1:8001/eureka/,http://peer2:8002/eureka/
+  instance :
+    preferIpAddress : true
