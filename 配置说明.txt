@@ -39,3 +39,8 @@ microservice-sleuth-zipkin
 gateway
 microservice-api-gateway
 --api-gateway 8051
+
+配置中心
+microservice-config
+--config-server 8061
+--config-client 8062

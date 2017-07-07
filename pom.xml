@@ -22,6 +22,7 @@
         <module>microservice-hystrix-dashboard</module>
         <module>microservice-sleuth-zipkin</module>
         <module>microservice-api-gateway</module>
+        <module>microservice-config</module>
     </modules>
 
     <properties>

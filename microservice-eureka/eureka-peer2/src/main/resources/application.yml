@@ -1,13 +1,13 @@
-server :
-  port : 8002
+server:
+  port: 8002
 
-spring :
-  application :
-    name : microservice-eureka
+spring:
+  application:
+    name: microservice-eureka
 
-eureka :
-  instance :
-    hostname : peer2
-  client :
-    serviceUrl :
-      defaultZone : http://peer1:8001/eureka/
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8001/eureka/

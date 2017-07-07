@@ -1,13 +1,13 @@
-server :
-  port : 8031
+server:
+  port: 8031
 
-spring :
-  application :
-    name : microservice-consumer-ribbon-hystrix
+spring:
+  application:
+    name: microservice-consumer-ribbon-hystrix
 
-eureka :
-  client :
-    serviceUrl :
-      defaultZone : http://peer1:8001/eureka/,http://peer2:8002/eureka/
-  instance :
-    hostname : ribbon
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8001/eureka/,http://peer2:8002/eureka/
+  instance:
+    hostname: ribbon

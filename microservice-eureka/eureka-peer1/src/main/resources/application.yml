@@ -1,20 +1,20 @@
-server :
-  port : 8001 # 指定该Eureka实例的端⼝
+server:
+  port: 8001 # 指定该Eureka实例的端⼝
 
-spring :
-  application :
-    name : microservice-eureka
+spring:
+  application:
+    name: microservice-eureka
 
-eureka :
-  instance :
-    hostname : peer1 # 指定该Eureka实例的主机名
-  client :
-    #registerWithEureka : false
-    #fetchRegistry : false
-    #serviceUrl :
-      #defaultZone : http://${eureka.instance.hostname}:${server.port}/eureka/
-    serviceUrl :
-      defaultZone : http://peer2:8002/eureka/
+eureka:
+  instance:
+    hostname: peer1 # 指定该Eureka实例的主机名
+  client:
+    #registerWithEureka: false
+    #fetchRegistry: false
+    #serviceUrl:
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    serviceUrl:
+      defaultZone: http://peer2:8002/eureka/
 
 #eureka.instance.lease-expiration-duration-in-seconds=90 定义服务失效时间，默认90秒
 #eureka.instance.lease-renewal-interval-in-seconds=30 定义服务续约任务的调用间隔时间，默认30秒

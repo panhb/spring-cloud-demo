@@ -1,20 +1,20 @@
-server :
-  port : 8032
+server:
+  port: 8032
 
-spring :
-  application :
-    name : microservice-consumer-feign-hystrix
+spring:
+  application:
+    name: microservice-consumer-feign-hystrix
 
-eureka :
-  client :
-    serviceUrl :
-      defaultZone : http://peer1:8001/eureka/,http://peer2:8002/eureka/
-  instance :
-      hostname : feign
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8001/eureka/,http://peer2:8002/eureka/
+  instance:
+      hostname: feign
 
-feign :
-  hystrix :
-    enabled : true
+feign:
+  hystrix:
+    enabled: true
 
 ribbon:
   eureka:

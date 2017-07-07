@@ -1,24 +1,24 @@
-server :
-  port : 8051
+server:
+  port: 8051
 
-spring :
-  application :
-    name : microservice-api-gateway
+spring:
+  application:
+    name: microservice-api-gateway
 
-eureka :
-  client :
-    serviceUrl :
-      defaultZone : http://peer1:8001/eureka/,http://peer2:8002/eureka/
-  instance :
-    preferIpAddress : true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8001/eureka/,http://peer2:8002/eureka/
+  instance:
+    preferIpAddress: true
 
-zuul :
-  ignored-services : microservice-provider,microservice-eureka
-  routes :
-    user :
-      #path : /user/**
-      path : /**
-      service-id : microservice-consumer-ribbon-hystrix-sleuth
-      # url : http://localhost:8000/
+zuul:
+  ignored-services: microservice-provider,microservice-eureka
+  routes:
+    user:
+      #path: /user/**
+      path: /**
+      service-id: microservice-consumer-ribbon-hystrix-sleuth
+      # url: http://localhost:8000/
       # path路由到的地址，也就是访问http://localhost:8051/user/**会路由到http://localhost:8000/**
 
