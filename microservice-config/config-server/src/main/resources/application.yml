@@ -11,7 +11,7 @@ spring:
           uri: https://github.com/panhb/spring-cloud-demo.git
           search-paths: config-repo
           username: 391400311@qq.com
-          password: panhongbo891010
+          password:
 
 
 
