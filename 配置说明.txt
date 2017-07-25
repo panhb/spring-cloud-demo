@@ -44,3 +44,10 @@ microservice-api-gateway
 microservice-config
 --config-server 8061
 --config-client 8062
+
+
+
+
+rabbitmq-plugins enable rabbitmq_management
+http://localhost:15672
+guest/guest

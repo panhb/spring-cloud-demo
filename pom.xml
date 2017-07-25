@@ -23,6 +23,7 @@
         <module>microservice-sleuth-zipkin</module>
         <module>microservice-api-gateway</module>
         <module>microservice-config</module>
+        <module>microservice-mq</module>
     </modules>
 
     <properties>
