@@ -7,12 +7,14 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 @Component
 @RabbitListener(queues = "test")
 public class Receiver {
 
     @RabbitHandler
-    public void process(String date) {
-        System.out.println("receiver======="+date);
+    public void process(Date date) {
+        System.out.println("receiver======="+date.toString());
     }
 }

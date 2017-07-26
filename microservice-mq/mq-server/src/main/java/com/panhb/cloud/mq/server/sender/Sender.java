@@ -16,6 +16,6 @@ public class Sender {
     private AmqpTemplate amqpTemplate;
 
     public void send(){
-        amqpTemplate.convertAndSend("test",new Date().toString());
+        amqpTemplate.convertAndSend("test",new Date());
     }
 }
