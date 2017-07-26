@@ -12,6 +12,11 @@ spring:
           search-paths: config-repo
           username: 391400311@qq.com
           password:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 
 
@@ -22,3 +27,6 @@ eureka:
   instance:
     preferIpAddress: true
 
+management :
+  security :
+    enabled : false
