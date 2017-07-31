@@ -45,6 +45,11 @@ microservice-config
 --config-server 8061
 --config-client 8062
 
+消息中心
+microservice-mq
+--mq-server 8071
+--mq-client 8072
+
 
 
 
