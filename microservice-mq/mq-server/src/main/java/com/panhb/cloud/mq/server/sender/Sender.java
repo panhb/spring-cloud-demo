@@ -7,7 +7,9 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 /**
- * Created by admin on 2017/7/20.
+ *
+ * @author admin
+ * @date 2017/7/20
  */
 @Component
 public class Sender {

@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+/**
+ * @author hongbo.pan
+ */
 @RestController
 public class UserController {
 	
@@ -24,7 +27,7 @@ public class UserController {
 
 	@RequestMapping(value = "/instance-info" , produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ServiceInstance instanceInfo() {
-		ServiceInstance localServiceInstance = discoveryClient.getLocalServiceInstance();
+		ServiceInstance localServiceInstance = discoveryClient.getInstances("microservice-provider").get(0);
 		return localServiceInstance;
 	}
 

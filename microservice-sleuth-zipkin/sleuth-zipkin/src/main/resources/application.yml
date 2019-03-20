@@ -1,22 +1,26 @@
 server:
   port: 9000
 
-
 spring:
   application:
     name: microservice-sleuth-zipkin
   sleuth:
     enabled: false
   datasource:
-    schema[0]: classpath:/mysql.sql
-    url: jdbc:mysql://192.168.0.86:3306/zipkin?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    schema: classpath:/mysql.sql
+    url: jdbc:mysql://127.0.0.1:3306/zipkin?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
     username: root
-    password: admin
-    driver-class-name: com.mysql.jdbc.Driver
-    initialize: true
+    password: root
+    initialization-mode: ALWAYS
     continue-on-error: true
 
 zipkin:
   storage:
     type: mysql
+
+management:
+   metrics:
+      web:
+         server:
+            auto-time-requests: false
 

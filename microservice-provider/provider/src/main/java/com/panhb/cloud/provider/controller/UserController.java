@@ -24,7 +24,7 @@ public class UserController {
 
 	@RequestMapping(value = "/instance-info" , produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ServiceInstance instanceInfo() {
-		ServiceInstance localServiceInstance = discoveryClient.getLocalServiceInstance();
+		ServiceInstance localServiceInstance = discoveryClient.getInstances("microservice-provider").get(0);
 		return localServiceInstance;
 	}
 

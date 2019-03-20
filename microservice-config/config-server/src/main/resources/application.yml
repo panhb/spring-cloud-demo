@@ -27,6 +27,8 @@ eureka:
   instance:
     preferIpAddress: true
 
-management :
-  security :
-    enabled : false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -3,10 +3,13 @@ package com.panhb.cloud.consumer.service;
 import com.panhb.cloud.consumer.entity.User;
 
 
+/**
+ * @author hongbo.pan
+ */
 public interface UserHystrixService {
 	
-	public User findByUserName(String userName);
+	User findByUserName(String userName);
 
-	public User fallback(String userName);
+	User fallback(String userName);
 
 }

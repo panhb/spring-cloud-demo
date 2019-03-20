@@ -3,7 +3,6 @@ package com.panhb.cloud.consumer.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.base.MoreObjects;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 

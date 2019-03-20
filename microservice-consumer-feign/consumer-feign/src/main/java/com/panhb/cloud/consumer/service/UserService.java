@@ -1,7 +1,7 @@
 package com.panhb.cloud.consumer.service;
 
 import com.panhb.cloud.consumer.entity.User;
-import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface UserService {
 
 	@RequestMapping("/user/{userName}")
-	public User findByUserName(@RequestParam("userName") String userName);
+	User findByUserName(@RequestParam("userName") String userName);
 
 }

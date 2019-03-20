@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 
+/**
+ * @author hongbo.pan
+ */
 @Component
 @RabbitListener(queues = "test")
 public class Receiver {

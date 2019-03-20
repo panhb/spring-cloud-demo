@@ -1,6 +1,5 @@
 package com.panhb.cloud.provider.service.impl;
 
-
 import com.panhb.cloud.provider.entity.User;
 import com.panhb.cloud.provider.repository.UserRepository;
 import com.panhb.cloud.provider.service.UserService;
@@ -14,39 +13,48 @@ public class UserServiceImpl implements UserService {
 	
 	@Autowired
 	private UserRepository userRepository;
-	
+
+	@Override
 	public User findById(Long id) {
-		return userRepository.findOne(id);
+		return userRepository.findById(id).get();
 	}
 
+	@Override
 	public List<User> findAll() {
 		return userRepository.findAll();
 	}
 
+	@Override
 	public User save(User entity) {
 		return userRepository.save(entity);
 	}
 
+	@Override
 	public boolean exists(Long id) {
-		return userRepository.exists(id);
+		return userRepository.existsById(id);
 	}
 
+	@Override
 	public long count() {
 		return userRepository.count();
 	}
 
+	@Override
 	public void delete(Long id) {
-		userRepository.delete(id);
+		userRepository.deleteById(id);
 	}
 
+	@Override
 	public void delete(User entity) {
 		userRepository.delete(entity);
 	}
 
+	@Override
 	public void delete(List<User> entities) {
-		userRepository.delete(entities);
+		userRepository.deleteAll(entities);
 	}
 
+	@Override
 	public void deleteAll() {
 		userRepository.deleteAll();
 	}

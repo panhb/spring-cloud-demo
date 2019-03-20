@@ -5,6 +5,6 @@ import com.panhb.cloud.consumer.entity.User;
 
 public interface UserService {
 	
-	public User findByUserName(String userName);
+	User findByUserName(String userName);
 
 }

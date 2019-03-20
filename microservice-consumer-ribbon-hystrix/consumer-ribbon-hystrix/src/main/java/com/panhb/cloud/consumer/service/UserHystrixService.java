@@ -5,8 +5,8 @@ import com.panhb.cloud.consumer.entity.User;
 
 public interface UserHystrixService {
 	
-	public User findByUserName(String userName);
+	User findByUserName(String userName);
 
-	public User fallback(String userName);
+	User fallback(String userName);
 
 }

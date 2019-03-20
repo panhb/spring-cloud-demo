@@ -22,10 +22,12 @@ public class UserHystrixServiceImpl implements UserHystrixService {
 	private RestTemplate restTemplate;
 
 	@HystrixCommand(fallbackMethod = "fallback")
+	@Override
 	public User findByUserName(String userName) {
 		return restTemplate.getForObject("http://microservice-provider/user/" + userName, User.class);
 	}
 
+	@Override
 	public User fallback(String userName) {
 		log.info("异常发⽣，进⼊fallback⽅法，接收的参数：userName = {}", userName);
 		User user = new User();

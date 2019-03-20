@@ -7,6 +7,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * @author hongbo.pan
+ */
 @Entity
 @Table(name = "t_user")
 public class User implements Serializable {
