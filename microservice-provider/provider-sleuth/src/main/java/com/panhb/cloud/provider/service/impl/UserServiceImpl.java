@@ -1,8 +1,11 @@
 package com.panhb.cloud.provider.service.impl;
 
+import com.google.common.collect.Lists;
+import com.panhb.cloud.api.model.UserDTO;
 import com.panhb.cloud.provider.entity.User;
 import com.panhb.cloud.provider.repository.UserRepository;
 import com.panhb.cloud.provider.service.UserService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,18 +21,26 @@ public class UserServiceImpl implements UserService {
 	private UserRepository userRepository;
 
 	@Override
-	public User findById(Long id) {
-		return userRepository.findById(id).get();
+	public UserDTO findById(Long id) {
+		UserDTO userDTO = new UserDTO();
+		BeanUtils.copyProperties(userRepository.findById(id).get(), userDTO);
+		return userDTO;
 	}
 
 	@Override
-	public List<User> findAll() {
-		return userRepository.findAll();
+	public List<UserDTO> findAll() {
+		List<UserDTO> list = Lists.newArrayList();
+		BeanUtils.copyProperties(userRepository.findAll(), list);
+		return list;
 	}
 
 	@Override
-	public User save(User entity) {
-		return userRepository.save(entity);
+	public UserDTO save(UserDTO userDTO) {
+		User user = new User();
+		BeanUtils.copyProperties(userDTO, user);
+		user = userRepository.save(user);
+		BeanUtils.copyProperties(user, userDTO);
+		return userDTO;
 	}
 
 	@Override
@@ -48,13 +59,17 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public void delete(User entity) {
-		userRepository.delete(entity);
+	public void delete(UserDTO userDTO) {
+		User user = new User();
+		BeanUtils.copyProperties(userDTO, user);
+		userRepository.delete(user);
 	}
 
 	@Override
-	public void delete(List<User> entities) {
-		userRepository.deleteAll(entities);
+	public void delete(List<UserDTO> userDTOList) {
+		List<User> list = Lists.newArrayList();
+		BeanUtils.copyProperties(userDTOList, list);
+		userRepository.deleteAll(list);
 	}
 
 	@Override
@@ -63,8 +78,10 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public User findByUserName(String userName) {
-		return userRepository.findByUserName(userName);
+	public UserDTO findByUserName(String userName) {
+		UserDTO userDTO = new UserDTO();
+		BeanUtils.copyProperties(userRepository.findByUserName(userName), userDTO);
+		return userDTO;
 	}
 
 }

@@ -1,7 +1,6 @@
 package com.panhb.cloud.provider.controller;
 
-
-import com.panhb.cloud.provider.entity.User;
+import com.panhb.cloud.api.model.UserDTO;
 import com.panhb.cloud.provider.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -38,9 +37,9 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "/user/{userName}" , produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public User findByUserName(@PathVariable String userName) {
-		User user = userService.findByUserName(userName);
-		return user;
+	public UserDTO findByUserName(@PathVariable String userName) {
+		UserDTO userDTO = userService.findByUserName(userName);
+		return userDTO;
 	}
 
 }

@@ -25,6 +25,7 @@
         <module>microservice-api-gateway</module>
         <module>microservice-config</module>
         <module>microservice-mq</module>
+        <module>microservice-api</module>
     </modules>
 
     <properties>
@@ -56,6 +57,11 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>${guava.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

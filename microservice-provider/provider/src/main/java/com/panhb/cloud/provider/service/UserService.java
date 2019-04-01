@@ -1,30 +1,84 @@
 package com.panhb.cloud.provider.service;
 
-import com.panhb.cloud.provider.entity.User;
-import org.springframework.transaction.annotation.Transactional;
+import com.panhb.cloud.api.model.UserDTO;
 
 import java.util.List;
 
+/**
+ * @author hongbo.pan
+ */
 public interface UserService {
-	
-	User findById(Long id);
-	
-	List<User> findAll();
-	
-	User save(User entity);
-	
+
+	/**
+	 * findById
+	 *
+	 * @param id
+	 * @return UserDTO
+	 */
+	UserDTO findById(Long id);
+
+	/**
+	 * findAll
+	 *
+	 * @return List<UserDTO>
+	 */
+	List<UserDTO> findAll();
+
+	/**
+	 * save
+	 *
+	 * @param userDTO
+	 * @return UserDTO
+	 */
+	UserDTO save(UserDTO userDTO);
+
+	/**
+	 * exists
+	 *
+	 * @param id
+	 * @return boolean
+	 */
 	boolean exists(Long id);
-	
+
+	/**
+	 * count
+	 *
+	 * @return long
+	 */
 	long count();
-	
+
+	/**
+	 * delete
+	 *
+	 * @param id
+	 */
 	void delete(Long id);
-	
-	void delete(User entity);
-	
-	void delete(List<User> entities);
-	
+
+	/**
+	 * delete
+	 *
+	 * @param userDTO
+	 */
+	void delete(UserDTO userDTO);
+
+	/**
+	 * delete
+	 *
+	 * @param userDTOList
+	 */
+	void delete(List<UserDTO> userDTOList);
+
+	/**
+	 * deleteAll
+	 */
 	void deleteAll();
-	
-	User findByUserName(String userName);
+
+	/**
+	 * findByUserName
+	 *
+	 * @param userName
+	 * @return UserDTO
+	 */
+	UserDTO findByUserName(String userName);
 
 }
